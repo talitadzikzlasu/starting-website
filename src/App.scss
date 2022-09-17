@@ -1,0 +1,98 @@
+@import "./breakpoints.scss";
+
+.bold {
+  font-weight: 600;
+}
+
+.link {
+  color: #ffb905 !important;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.kolor {
+  color: #4196b8;
+  font-weight: 600;
+}
+
+.red {
+  color: #f53f67;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.phone-menu {
+  width: 100%;
+  height: 70px;
+  padding: 10px 0 0 20px;
+  background-color: white;
+
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+}
+.phone-menu-list {
+  ul {
+    list-style: none;
+  }
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  filter: drop-shadow(1px 1px 5px rgb(221, 220, 220));
+  margin-top: 2px;
+  .menu-item {
+    width: 85%;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+
+    &:hover {
+      background-color: rgb(227, 228, 227);
+    }
+  }
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+}
+.top-menu {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  z-index: 1000;
+  background-color: white;
+  filter: drop-shadow(1px 1px 3px rgb(212, 212, 212));
+
+  display: none;
+  @include for-tablet-landscape-up {
+    width: 100%; /* Full width */
+    left: 0;
+    display: block;
+  }
+  @include for-desktop-up {
+    width: 50%; /* Full width */
+    left: 50%;
+  }
+
+  @include for-big-desktop-up {
+    width: 900px;
+    margin: 0 auto;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    & > div {
+      float: right;
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 16px;
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+}

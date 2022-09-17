@@ -1,0 +1,237 @@
+/******************/
+/******************/
+/******************/
+/** FIRST */
+/******************/
+/******************/
+/******************/
+/******************/
+@import "./breakpoints.scss";
+
+body {
+  @include for-big-desktop-up {
+    background-color: #dcf2ee;
+  }
+
+  & > div {
+    background-color: white;
+
+    @include for-big-desktop-up {
+      width: 1800px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.main-page-container {
+  position: relative;
+
+  @include for-tablet-landscape-up {
+    background-image: url("https://i.ibb.co/3k5RGLP/mainbgmall.png"),
+      url("https://i.ibb.co/Cz0ZQRP/ludki-left-small.png"),
+      url("https://i.ibb.co/3dBb0jv/ludki-prawo-small.png");
+    background-position: left top, left bottom, right bottom;
+
+    height: 100vh;
+    min-height: 50vw;
+
+    background-repeat: no-repeat;
+  }
+  @include for-desktop-up {
+    background-image: url("https://i.ibb.co/3k5RGLP/mainbgmall.png"),
+      url("https://i.ibb.co/nrpjQjq/ludki-left.png"),
+      url("https://i.ibb.co/SXVSQ35/ludki-prawo.png");
+    background-position: left top, left bottom, right bottom;
+    background-repeat: no-repeat;
+  }
+
+  min-height: 110vh;
+
+  .content-container {
+    width: 100%;
+    float: right;
+    margin-top: 40px;
+
+    .meeting-info-box {
+      float: right;
+      margin-top: 50px;
+      margin-right: 210px;
+      background-color: rgba($color: #ffffff, $alpha: 0.6);
+      border-radius: 8px;
+      padding: 1rem;
+      display: none;
+
+      @include for-tablet-landscape-up {
+        display: block;
+      }
+
+      .meeting-info-title1 {
+        font-family: "Fingerpaint";
+        font-size: 60px;
+        width: 600px;
+      }
+
+      .meeting-info-title2 {
+        font-family: "Fingerpaint";
+        font-size: 35px;
+        margin-left: 30px;
+        width: 600px;
+      }
+
+      .meeting-info-subtitle {
+        font-family: "Garet";
+        font-size: 30px;
+        color: #ffb905;
+        margin-left: 60px;
+        width: 600px;
+      }
+
+      .meeting-info-subtitle2 {
+        font-family: "Garet";
+        font-size: 24px;
+        color: black;
+        font-weight: 600;
+        margin-top: 30px;
+        width: 600px;
+      }
+      .meeting-info-text {
+        font-size: 20px;
+        font-family: "OpenSansLight";
+        width: 750px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .main-page-container {
+  }
+}
+
+/******************/
+/******************/
+/******************/
+/** GALLERY */
+/******************/
+/******************/
+/******************/
+/******************/
+
+.main-page-container-place-photos {
+  box-sizing: border-box;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  width: 100%;
+
+  @include for-tablet-portrait-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include for-desktop-up {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /*
+  flex-direction: row;
+  align-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  */
+  .image-gallery {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/******************/
+/******************/
+/******************/
+/* QUESTIONS */
+/******************/
+/******************/
+/******************/
+/******************/
+
+.main-page-container-las-main {
+  background-image: url(https://www.ic.org/wp-content/uploads/2020/08/ev25_3776_82707-2-scaled-copy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  p {
+    font-family: "Garet";
+    font-size: 36px;
+    margin: 0 auto;
+    font-weight: 600;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto 50px;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .main-page-container-las-main {
+    background-image: url(https://www.ic.org/wp-content/uploads/2020/08/ev25_3776_82707-2-scaled-copy.jpg);
+
+    background-repeat: no-repeat;
+  }
+}
+
+/******************/
+/******************/
+/******************/
+/** INFO */
+/******************/
+/******************/
+/******************/
+/******************/
+.main-page-container-info {
+  background-size: 100%;
+  min-height: 50vw;
+  background-repeat: no-repeat;
+  padding-top: 60px;
+
+  .info-questions-box {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+    font-size: 21px;
+    font-family: "OpenSansLight";
+
+    .info-questions {
+      width: 46%;
+      margin-right: 40px;
+
+      p {
+        margin-bottom: 0.9rem;
+      }
+    }
+  }
+}
+
+/******************/
+/******************/
+/******************/
+/* HELP US */
+/******************/
+/******************/
+/******************/
+/******************/
+
+.main-page-container-join {
+  background-image: url(https://i.ibb.co/pr2bFB8/Screenshot-from-2022-09-16-05-24-06.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 120vh;
+  font-size: 21px;
+  font-family: "OpenSansLight";
+  @include for-big-desktop-up {
+    width: 1800px;
+    margin: 0 auto;
+  }
+}
