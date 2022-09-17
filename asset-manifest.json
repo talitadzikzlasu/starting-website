@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.c5ea2255.css",
-    "main.js": "/static/js/main.b7d01b81.js",
+    "main.css": "/static/css/main.3ab886be.css",
+    "main.js": "/static/js/main.e62d412d.js",
     "static/media/OpenSans-Light.ttf": "/static/media/OpenSans-Light.3d5923f94fc319b5652a.ttf",
     "static/media/FingerPaint-Regular.ttf": "/static/media/FingerPaint-Regular.78e15499d070011f399f.ttf",
     "static/media/Garet-Book.woff": "/static/media/Garet-Book.c69733e9aa6a9fc22bcb.woff",
     "index.html": "/index.html",
-    "main.c5ea2255.css.map": "/static/css/main.c5ea2255.css.map",
-    "main.b7d01b81.js.map": "/static/js/main.b7d01b81.js.map"
+    "main.3ab886be.css.map": "/static/css/main.3ab886be.css.map",
+    "main.e62d412d.js.map": "/static/js/main.e62d412d.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5ea2255.css",
-    "static/js/main.b7d01b81.js"
+    "static/css/main.3ab886be.css",
+    "static/js/main.e62d412d.js"
   ]
 }
