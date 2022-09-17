@@ -46,7 +46,6 @@ body {
     background-repeat: no-repeat;
   }
 
-  min-height: 110vh;
   .phone-cloud {
     @include for-tablet-landscape-up {
       display: none;
@@ -257,11 +256,11 @@ body {
   .info-questions-box {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 90%;
     margin: auto;
     font-size: 16px;
     font-family: "OpenSansLight";
-
+gap: 40px;
     @include for-tablet-landscape-up {
       flex-direction: row;
     }
@@ -292,14 +291,29 @@ body {
 /******************/
 
 .main-page-container-join {
-  background-image: url(https://i.ibb.co/pr2bFB8/Screenshot-from-2022-09-16-05-24-06.png);
-  background-position: top;
-  background-repeat: no-repeat;
-  height: 120vh;
+  padding-bottom: 90px;
+  .picure-help-big {
+    display: none;
+    @include for-tablet-landscape-up{
+    width: 800px;
+    display: block;
+    margin: auto;
+    }
+  }
   font-size: 21px;
   font-family: "OpenSansLight";
   @include for-big-desktop-up {
     width: 1800px;
     margin: 0 auto;
+  }
+
+  .join-box {
+    width: 90%;
+    font-size: 16px;
+    margin: 0 auto;
+    @include for-tablet-landscape-up {
+      width: 800px;
+      font-size: 20px;
+    }
   }
 }

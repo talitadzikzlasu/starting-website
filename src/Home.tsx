@@ -132,7 +132,7 @@ const Home = () => (
           <p className="kolor"> REJESTRACJA </p>
           <p>
             Zarejestrujesz się{" "}
-            <a href="https://forms.gle/K2Cguq6TmdchP3Qt5">tutaj</a>
+            <a href="https://forms.gle/K2Cguq6TmdchP3Qt5" className="red">tutaj</a>
           </p>
           <p>Jeśli nie chcesz używać Google, możesz napisać do nas maila.</p>
           <p>
@@ -173,21 +173,23 @@ const Home = () => (
             </span>
           </p>
           <p className="kolor">
-            <a href="#">Wydarzenie na facebooku.</a>
+            <a href="#" className="red">Wydarzenie na facebooku.</a>
           </p>
         </div>
       </div>
     </div>
     <div id="questions" className="main-page-container-join">
-      <p>Chcesz się przyłączyć do organizacji spotkania?</p>
+      <img className="picure-help-big" src="https://i.ibb.co/pr2bFB8/Screenshot-from-2022-09-16-05-24-06.png" />
+      <div className="join-box">
+      <p className="kolor">Chcesz się przyłączyć do organizacji spotkania?</p>
       <ul>
         <li>zabierz ze sobą instrument</li>
         <li>
           zorganizuj warsztaty, joga, medytacja, malowanie, szydełkowanie,
-          budowanie rokiet kosmicznych, co tylko wymyślisz
+          budowanie rakiet kosmicznych, co tylko wymyślisz
         </li>
         <li>
-          przyjedź wcześniej i pomóż w dumpster divingu albo szykowaniu jedzenia
+          przyjedź wcześniej i pomóż w dumpster divingu
         </li>
         <li>
           daj nam znać, czy chcesz przybyć samochodem, może być pomocny do
@@ -199,6 +201,7 @@ const Home = () => (
         Napisz nam w mailu lub formularzu zgłoszenia o swoich chęciach. Pomoże
         to w organizacji.
       </p>
+      </div>
     </div>
   </div>
 );
