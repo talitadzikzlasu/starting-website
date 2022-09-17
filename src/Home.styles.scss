@@ -26,6 +26,8 @@ body {
 .main-page-container {
   position: relative;
 
+  background-repeat: no-repeat;
+
   @include for-tablet-landscape-up {
     background-image: url("https://i.ibb.co/3k5RGLP/mainbgmall.png"),
       url("https://i.ibb.co/Cz0ZQRP/ludki-left-small.png"),
@@ -35,7 +37,6 @@ body {
     height: 100vh;
     min-height: 50vw;
 
-    background-repeat: no-repeat;
   }
   @include for-desktop-up {
     background-image: url("https://i.ibb.co/3k5RGLP/mainbgmall.png"),
@@ -46,58 +47,101 @@ body {
   }
 
   min-height: 110vh;
-
+  .phone-cloud {
+    @include for-tablet-landscape-up {
+      display: none;
+    }
+  }
   .content-container {
     width: 100%;
     float: right;
+
+    @include for-tablet-landscape-up{
     margin-top: 40px;
+    }
 
     .meeting-info-box {
-      float: right;
-      margin-top: 50px;
-      margin-right: 210px;
-      background-color: rgba($color: #ffffff, $alpha: 0.6);
-      border-radius: 8px;
-      padding: 1rem;
-      display: none;
+      margin: 20px;
+
 
       @include for-tablet-landscape-up {
         display: block;
+        float: right;
+        margin: 50px auto 0;
+        
+        background-color: rgba($color: #ffffff, $alpha: 0.85);
+        border-radius: 8px;
+        padding: 1rem;
+        width: 800px;
       }
+      @include for-desktop-up {
+        margin-right: 210px;
+      }
+
+
 
       .meeting-info-title1 {
         font-family: "Fingerpaint";
-        font-size: 60px;
-        width: 600px;
+        font-size: 30px;
+        
+        @include for-tablet-landscape-up {
+          font-size: 34px;
+        }
+
+        @include for-desktop-up {
+        font-size: 54px;
+        }
       }
 
       .meeting-info-title2 {
         font-family: "Fingerpaint";
-        font-size: 35px;
-        margin-left: 30px;
-        width: 600px;
+        font-size: 20px;
+        
+        @include for-tablet-landscape-up {
+          font-size: 20px;
+  
+        }
+
+        @include for-desktop-up {
+          font-size: 30px;
+          }
       }
 
       .meeting-info-subtitle {
         font-family: "Garet";
-        font-size: 30px;
+        font-size: 20px;
         color: #ffb905;
-        margin-left: 60px;
-        width: 600px;
+
+        @include for-desktop-up {
+          font-size: 24px;
+          }
       }
 
       .meeting-info-subtitle2 {
         font-family: "Garet";
-        font-size: 24px;
+        font-size: 18px;
         color: black;
         font-weight: 600;
         margin-top: 30px;
-        width: 600px;
+
+        @include for-tablet-landscape-up {
+          font-size: 18px;
+  
+        }
+        @include for-desktop-up {
+          font-size: 24px;
+          }
       }
       .meeting-info-text {
-        font-size: 20px;
+        font-size: 14px;
         font-family: "OpenSansLight";
-        width: 750px;
+        @include for-tablet-landscape-up {
+          font-size: 14px;
+  
+        }
+        @include for-desktop-up {
+          font-size: 16px;
+          }
       }
     }
   }
@@ -160,16 +204,29 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding-top: 60px;
 
+  @include for-desktop-up {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  }
   p {
-    font-family: "Garet";
-    font-size: 36px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 0 auto;
     font-weight: 600;
     text-align: center;
     width: 90%;
     margin: 0 auto 50px;
     color: white;
+
+    @include for-tablet-landscape-up {
+      font-size: 24px;
+
+    }
+    @include for-desktop-up {
+      font-size: 30px;
+    }
   }
 }
 
@@ -193,20 +250,31 @@ body {
   background-size: 100%;
   min-height: 50vw;
   background-repeat: no-repeat;
-  padding-top: 60px;
+  @include for-tablet-landscape-up {
+
+  padding-top: 60px;}
 
   .info-questions-box {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 70%;
     margin: auto;
-    font-size: 21px;
+    font-size: 16px;
     font-family: "OpenSansLight";
 
-    .info-questions {
-      width: 46%;
-      margin-right: 40px;
+    @include for-tablet-landscape-up {
+      flex-direction: row;
+    }
+    @include for-desktop-up {
+    font-size: 21px;
 
+    }
+    .info-questions {
+
+
+      @include for-tablet-landscape-up {
+        width: 46%;
+      }
       p {
         margin-bottom: 0.9rem;
       }

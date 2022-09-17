@@ -15,6 +15,8 @@ const photos = [
 const Home = () => (
   <div>
     <div id="start" className="main-page-container">
+    <img className="phone-cloud" src="https://i.ibb.co/9gwSZxR/rsz-mainbgmall.png" />
+
       <div className="content-container">
         <div className="meeting-info-box">
           <div className="meeting-info-title1">Budowanie </div>
@@ -28,9 +30,9 @@ const Home = () => (
           </div>
           <div className="meeting-info-text">
             <p>
-              Naszym celem jest{" "}
+              Spotykamy się, żeby{" "}
               <span className="bold">
-                połączenie osób, które marzą o stworzeniu grupy ludzi, których
+                poznać inne osoby, które marzą o stworzeniu grupy ludzi, których
                 łączą podobne wartości i chcą żyć razem (społeczność
                 intencjonalna)
               </span>{" "}
