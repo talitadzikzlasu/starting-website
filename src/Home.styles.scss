@@ -60,28 +60,47 @@ body {
     }
 
     .meeting-info-box {
-      margin: 20px;
-
+      display: grid;
+      grid-template-columns: 7fr 6fr;
+      grid-template-rows: 2fr 1fr 1fr 0.5fr 8fr;
+      grid-template-areas: 
+      "title-big diagonal"
+      "title-small diagonal"
+      "subtitle  subtitle"
+      "subtitle2  subtitle2"
+      "rest rest";
+      // background-image: url(https://i.ibb.co/HB9kVSg/tlojesien.png);
 
       @include for-tablet-landscape-up {
-        display: block;
+        display: grid;
         float: right;
         margin: 50px auto 0;
         
         background-color: rgba($color: #ffffff, $alpha: 0.85);
         border-radius: 8px;
-        padding: 1rem;
         width: 800px;
       }
       @include for-desktop-up {
         margin-right: 210px;
+        margin-top: 100px;
+
       }
 
+      .drugie-spotkanie {
+        color: orange;
+        font-size: 24px;
+      }
+
+      .wiecej-tutaj {
+        font-size: 14px;
+      }
 
 
       .meeting-info-title1 {
         font-family: "Fingerpaint";
         font-size: 30px;
+        grid-area: title-big;
+        align-self: end;
         
         @include for-tablet-landscape-up {
           font-size: 34px;
@@ -95,6 +114,7 @@ body {
       .meeting-info-title2 {
         font-family: "Fingerpaint";
         font-size: 20px;
+        grid-area: title-small;
         
         @include for-tablet-landscape-up {
           font-size: 20px;
@@ -102,7 +122,7 @@ body {
         }
 
         @include for-desktop-up {
-          font-size: 30px;
+          font-size: 24px;
           }
       }
 
@@ -110,6 +130,7 @@ body {
         font-family: "Garet";
         font-size: 20px;
         color: #ffb905;
+        grid-area: subtitle;
 
         @include for-desktop-up {
           font-size: 24px;
@@ -121,7 +142,9 @@ body {
         font-size: 18px;
         color: black;
         font-weight: 600;
-        margin-top: 30px;
+
+        grid-area: subtitle2;
+        align-self: end;
 
         @include for-tablet-landscape-up {
           font-size: 18px;
@@ -131,9 +154,31 @@ body {
           font-size: 24px;
           }
       }
+      .meeting-info-subtitle-diagonal {
+        font-family: "Garet";
+        font-size: 18px;
+        color: black;
+        font-weight: 600;
+        margin-top: 30px;
+        rotate: 26deg;
+
+        grid-area: diagonal;
+        align-self: end;
+
+        @include for-tablet-landscape-up {
+          font-size: 18px;
+  
+        }
+        @include for-desktop-up {
+          font-size: 16px;
+          }
+      }
       .meeting-info-text {
         font-size: 14px;
         font-family: "OpenSansLight";
+
+        grid-area: rest;
+
         @include for-tablet-landscape-up {
           font-size: 14px;
   

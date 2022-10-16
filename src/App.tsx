@@ -6,6 +6,7 @@ import Info from "./Info";
 import Meetings from "./Meetings";
 import Goal from "./Goal";
 import { useState } from "react";
+import Projects from "./Projects";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,17 +26,18 @@ function App() {
             <Link to="/meetings">spotkania</Link>
           </div>
 
+          {/* <div className="menu-item">
+            <Link to="/projects">projekty</Link>
+          </div> */}
+
           <div className="menu-item">
             <Link to="/information">info</Link>
           </div>
 
           <div className="menu-item">
-            <Link to="/aboutus">o nas/kontakt</Link>
+            <Link to="/aboutus">o nas</Link>
           </div>
 
-          <div className="menu-item">
-            <Link to="/goal">nasze cele</Link>
-          </div>
           <div className="menu-item">
             <a
               href="https://forms.gle/K2Cguq6TmdchP3Qt5"
@@ -67,21 +69,22 @@ function App() {
                 <Link to="/meetings">Spotkania</Link>
               </div>
             </li>
+            {/* <li>
+              <div className="menu-item" onClick={toggleMenu}>
+                <Link to="/projects">Projekty</Link>
+              </div>
+            </li> */}
             <li>
               <div className="menu-item" onClick={toggleMenu}>
-                <Link to="/info">Info</Link>
+                <Link to="/information">Info</Link>
               </div>
             </li>
             <li>
               <div className="menu-item" onClick={toggleMenu}>
-                <Link to="/aboutus">Kontak</Link>
+                <Link to="/aboutus">O nas</Link>
               </div>
             </li>
-            <li>
-              <div className="menu-item" onClick={toggleMenu}>
-                <Link to="/goals">Cele</Link>
-              </div>
-            </li>
+
             <li>
               <div className="menu-item" onClick={toggleMenu}>
                 <a
@@ -100,6 +103,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/information" element={<Info />}></Route>
         <Route path="/meetings" element={<Meetings />}></Route>
+        <Route path="/projects" element={<Projects />}></Route>
         <Route path="/aboutus" element={<Contact />}></Route>
         <Route path="/goal" element={<Goal />}></Route>
       </Routes>

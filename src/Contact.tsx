@@ -24,12 +24,9 @@ const Contact = () => (
           </p>
           <p>
             Napisz na:{" "}
-            <a
-              href="mailto:regenerativecommunity@protonmail.com"
-              className="kolor"
-            >
+            <a href="mailto:startingcommunity@proton.me" className="kolor">
               {" "}
-              regenerativecommunity@protonmail.com
+              startingcommunity@proton.me
             </a>
           </p>
         </div>

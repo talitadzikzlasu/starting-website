@@ -1,0 +1,36 @@
+@import "./breakpoints.scss";
+
+.meetings-container {
+  width: 90%;
+  background-color: white;
+  border-radius: 16px;
+  margin: 0 auto;
+
+  @include for-tablet-landscape-up {
+    width: 60%;
+  }
+  @include for-desktop-up {
+    padding: 100px 0;
+  }
+
+  img {
+    width: 300px;
+    @include for-tablet-landscape-up {
+      width: 600px;
+    }
+  }
+
+  .video {
+    width: 300px;
+    height: 200px;
+    @include for-tablet-landscape-up {
+      width: 600px;
+    }
+  }
+  image-meeting {
+    width: 300px;
+    @include for-tablet-landscape-up {
+      width: 600px;
+    }
+  }
+}

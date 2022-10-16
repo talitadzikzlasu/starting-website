@@ -1,65 +1,91 @@
+import { Link } from "react-router-dom";
 import "./Home.styles.scss";
 
 const photos = [
   "https://mazury24.eu/repo/img/galerie/j015-jezioro-boczne-porty-2019/jezioro-boczne-porty-2019_14419_7.jpg",
   "https://www.gizycko.com/pics/xfDkZszlak_pixabay_2.jpg",
-  "https://i.ibb.co/W5WWGPr/1585150981.jpg",
-  "https://i.ibb.co/9WRGJ74/Screenshot-from-2022-09-15-10-37-31.png",
-  "https://i.ibb.co/fDp6hsC/signal-2022-08-30-192726-002.jpg",
+  "https://i.ibb.co/JHqVMcr/signal-2022-10-15-110235-002.jpg",
+  // "https://i.ibb.co/9WRGJ74/Screenshot-from-2022-09-15-10-37-31.png",
+  "https://i.ibb.co/Gv17c8j/obiad.jpg",
+  "https://mazury24.eu/img/galerie/102587_7.jpg",
+  // "https://i.ibb.co/fDp6hsC/signal-2022-08-30-192726-002.jpg",
   "https://i.ibb.co/3zf2L6G/305524454-646020420273828-1204393967445439747-n.png",
   "https://polskieostoje.pl/images/mazurska-ostoja/rydzewo-12102019_1-galeria.jpg",
-  "https://mazury24.eu/img/galerie/102587_7.jpg",
+  "https://i.ibb.co/W5WWGPr/1585150981.jpg",
   "https://i.ibb.co/44S6ZHB/304787723-428529502475492-8099473415662598241-n.png",
 ];
 
 const Home = () => (
   <div>
     <div id="start" className="main-page-container">
-    <img className="phone-cloud" src="https://i.ibb.co/9gwSZxR/rsz-mainbgmall.png" />
+      <img
+        className="phone-cloud"
+        src="https://i.ibb.co/9gwSZxR/rsz-mainbgmall.png"
+      />
 
       <div className="content-container">
         <div className="meeting-info-box">
           <div className="meeting-info-title1">Budowanie </div>
+          <div className="meeting-info-subtitle-diagonal">
+            {/* <p>Rydzewo (Giżycko) 2 - 9 października</p> */}
+            <p>
+              <span className="drugie-spotkanie">DRUGIE SPOTKANIE !!</span>{" "}
+              <p className="wiecej-tutaj">
+                <Link to="/meetings#first">(o pierwszym tutaj)</Link>
+              </p>
+            </p>
+          </div>
           <div className="meeting-info-title2">społecznosci intencjonalnej</div>
           <div className="meeting-info-subtitle">
             nauka i łączenie się -{" "}
             <span className="red"> spotkanie na żywo :)</span>
           </div>
           <div className="meeting-info-subtitle2">
-            Rydzewo (Giżycko) 28 września - 5 października
+            {" "}
+            Rydzewo (Giżycko) 2 - 9 listopada
           </div>
+
+          {/* <div className="meeting-info-subtitle-moomins">(pod roboczym tytułem: "jak zamieszkać w dolinie Muminków")</div> */}
           <div className="meeting-info-text">
             <p>
-              Spotykamy się, żeby{" "}
+              Spotykamy się żeby{" "}
               <span className="bold">
-                poznać inne osoby, które marzą o stworzeniu grupy ludzi, których
+                poznać inne osoby, które marzą o stworzeniu grupy ludzi których
                 łączą podobne wartości i chcą żyć razem (społeczność
                 intencjonalna)
               </span>{" "}
               i{" "}
               <span className="bold">
-                poznanie najlepszych sposobów na zbudowanie takiej społeczności
+                dowiedzieć się więcej o najlepszych sposobach na zbudowanie
+                takiej społeczności
               </span>
             </p>
 
             <p>
-              Spotykamy się, by spędzić razem czas, odpocząć{" "}
-              <span className="bold">w naturze,</span> , zobaczyć co nas łączy i
+              Spotykamy się znowu by spędzić razem czas, odpocząć{" "}
+              <span className="bold">w naturze,</span> zobaczyć co nas łączy i
               nauczyć się więcej o budowaniu społeczności z{" "}
               <span className="bold">
-                przygotowanych przez nas materiłów, od siebie nawzajem i od
+                przygotowanych przez nas materiałów, od siebie nawzajem i od
                 zaproszonych gości.
               </span>
               .
             </p>
 
             <p>
-              Mamy też większy cel, jakim jest stworzenie grupy/grup, które będą
-              chciały rozpocząć
+              Mamy też większy cel, jakim jest stworzenie grupy/grup które będą
+              chciały rozpocząć{" "}
               <span className="bold">
-                proces budowania społeczności w 2023{" "}
+                proces budowania społeczności w 2023 roku :)
               </span>{" "}
-              :)
+              <p>
+                Poprzednie spotkanie odbyło się na przełomie wrzesnia i
+                października. O tym co robiliśmy i o naszych planach{" "}
+                <span className="link">
+                  <Link to="/meetings#first">tutaj.</Link>
+                </span>{" "}
+                :)
+              </p>
               <p className="link">przewiń w dół aby dowiedzieć się więcej</p>
             </p>
           </div>
@@ -72,8 +98,8 @@ const Home = () => (
       ))}
     </div>
     <div id="questions" className="main-page-container-las-main">
-      <p>Intersuje Cię temat budowania społeczności?</p>
-      <p>Chcesz zobaczyć, czy to dla Ciebie?</p>
+      <p>Interesuje Cię temat budowania społeczności?</p>
+      <p>Chcesz kiedyś zamieszkać w Dolinie Muminków?</p>
       <p>Chcesz poznać innych o podobnych marzeniach i planach?</p>
       <p>
         Bliskie są Ci wartości takie jak pomoc innym, wspólnota, natura, piękno,
@@ -87,7 +113,7 @@ const Home = () => (
       <div className="info-questions-box">
         <div className="info-questions">
           <p className="kolor"> KIEDY </p>{" "}
-          <p> Spotkanie odbywa się między 28 września a 5 października.</p>{" "}
+          <p> Spotkanie odbywa się między 2 a 9 listopada.</p>{" "}
           <p>
             Możesz przyjechać na cały pobyt lub dowolnego dnia przed weekendem i
             wyjechać kiedykolwiek po weekendzie :){" "}
@@ -112,7 +138,7 @@ const Home = () => (
           </p>
           <p>
             <span className="kolor">NA NAJBLIŻSZYM SPOTKANIU</span> - między
-            innymi: "czemu 90% tworzących się społecznośźci rozpada się", "ilu
+            innymi: "czemu 90% tworzących się społeczności rozpada się", "ilu
             założycieli potrzeba aby rozpocząć", "co to jest wizja, a co to jest
             misja", "przegląd istniejących społecznośći, ich wizje, misje i
             zasady"{" "}
@@ -132,12 +158,11 @@ const Home = () => (
           <p className="kolor"> REJESTRACJA </p>
           <p>
             Zarejestrujesz się{" "}
-            <a href="https://forms.gle/K2Cguq6TmdchP3Qt5" className="red">tutaj</a>
+            <a href="https://forms.gle/K2Cguq6TmdchP3Qt5" className="red">
+              tutaj
+            </a>
           </p>
           <p>Jeśli nie chcesz używać Google, możesz napisać do nas maila.</p>
-          <p>
-            Z odpowiedziami na <a href="/aboutus#questions">te pytania.</a>/
-          </p>
         </div>
         <div className="info-questions">
           <p className="kolor"> DLA KOGO </p>{" "}
@@ -161,47 +186,55 @@ const Home = () => (
             Z KIM MOŻNA SIĘ SKONTAKTOWAĆ, ŻEBY UZYSKAĆ WIĘCEJ INFORMACJI?{" "}
           </p>
           <p>
-            Pobyt organizuje{" "}
-            <a href="/aboutus" className="kolor">
+            Pobyt organizują:{" "}
+            <Link to="/aboutus" className="kolor">
               {" "}
               Talita{" "}
-            </a>
+            </Link>
             . Jeśli masz jakiekolwiek pytania, napisz:{" "}
-            <span className="kolor">
-              {" "}
-              regenerativecommunity@protonmail.com{" "}
-            </span>
+            <span className="kolor"> startingcommunity@proton.me </span>
           </p>
+          <Link to="/information"> Więcej informacji znajdziesz tutaj</Link>
           <p className="kolor">
-            <a href="#" className="red">Wydarzenie na facebooku.</a>
+            <a
+              href="https://www.facebook.com/events/547079767191628?ref=newsfeed"
+              className="red"
+            >
+              Wydarzenie na facebooku.
+            </a>
           </p>
         </div>
       </div>
     </div>
     <div id="questions" className="main-page-container-join">
-      <img className="picure-help-big" src="https://i.ibb.co/pr2bFB8/Screenshot-from-2022-09-16-05-24-06.png" />
+      <img
+        className="picure-help-big"
+        src="https://i.ibb.co/LJWDsLy/Moomin-by-Tove-Jansson.jpg"
+      />
       <div className="join-box">
-      <p className="kolor">Chcesz się przyłączyć do organizacji spotkania?</p>
-      <ul>
-        <li>zabierz ze sobą instrument</li>
-        <li>
-          zorganizuj warsztaty, joga, medytacja, malowanie, szydełkowanie,
-          budowanie rakiet kosmicznych, co tylko wymyślisz
-        </li>
-        <li>
-          przyjedź wcześniej i pomóż w dumpster divingu
-        </li>
-        <li>
-          daj nam znać, czy chcesz przybyć samochodem, może być pomocny do
-          odbierania ludzi ze stacji
-        </li>
-        <li>a może coś jeszcze innego? :)</li>
-      </ul>
-      <p>
-        Napisz nam w mailu lub formularzu zgłoszenia o swoich chęciach. Pomoże
-        to w organizacji.
-      </p>
+        <p className="kolor">Chcesz się przyłączyć do organizacji spotkania?</p>
+        <ul>
+          <li>zabierz ze sobą instrument</li>
+          <li>
+            zorganizuj warsztaty, joga, medytacja, malowanie, szydełkowanie,
+            budowanie rakiet kosmicznych, co tylko wymyślisz
+          </li>
+          <li>przyjedź wcześniej i pomóż w dumpster divingu</li>
+          <li>
+            daj nam znać, czy chcesz przybyć samochodem, może być pomocny do
+            odbierania ludzi ze stacji
+          </li>
+          <li>a może coś jeszcze innego? :)</li>
+        </ul>
+        <p>
+          Napisz nam w mailu lub formularzu zgłoszenia o swoich chęciach. Pomoże
+          to w organizacji.
+        </p>
       </div>
+      <img
+        className="picure-help-big"
+        src="https://i.ibb.co/pr2bFB8/Screenshot-from-2022-09-16-05-24-06.png"
+      />
     </div>
   </div>
 );
